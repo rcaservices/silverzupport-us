@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Aspire Consulting Partners LLC — Live test sites and project demos.">
+  <title>Live Test Sites | Aspire Consulting Partners LLC</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --primary: #1a2744;
+      --accent: #3b82f6;
+      --accent-hover: #2563eb;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --text: #334155;
+      --text-light: #64748b;
+      --border: #e2e8f0;
+      --radius: 12px;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    header {
+      background: var(--primary);
+      color: #fff;
+      text-align: center;
+      padding: 3rem 1.5rem 2.5rem;
+    }
+
+    header h1 {
+      font-size: 1.75rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.05rem;
+      color: #94a3b8;
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .badge {
+      display: inline-block;
+      background: rgba(59, 130, 246, 0.15);
+      color: var(--accent);
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.3em 0.9em;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    /* Main */
+    main {
+      flex: 1;
+      max-width: 960px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    .section-label {
+      font-size: 0.8rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--text-light);
+      margin-bottom: 1.25rem;
+    }
+
+    /* Site Cards */
+    .site-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @media (min-width: 640px) {
+      .site-grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .site-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow 0.2s, border-color 0.2s;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .site-card:hover {
+      border-color: var(--accent);
+      box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+    }
+
+    .site-card h3 {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .site-card .domain {
+      font-size: 0.85rem;
+      color: var(--accent);
+      font-family: 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    }
+
+    .site-card .desc {
+      font-size: 0.9rem;
+      color: var(--text-light);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.75rem;
+      font-weight: 500;
+      color: #16a34a;
+      margin-top: auto;
+      padding-top: 0.5rem;
+    }
+
+    .status::before {
+      content: '';
+      width: 7px;
+      height: 7px;
+      background: #16a34a;
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    /* Empty state */
+    .empty-state {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--text-light);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 2rem 1.5rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+      border-top: 1px solid var(--border);
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (min-width: 768px) {
+      header { padding: 4rem 2rem 3rem; }
+      header h1 { font-size: 2.25rem; }
+      main { padding: 3rem 2rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="badge">Test Environment</div>
+    <h1>Aspire Consulting Partners</h1>
+    <p>Live project test sites and demos managed by Aspire Consulting Partners LLC.</p>
+  </header>
+
+  <main>
+    <p class="section-label">Managed Sites</p>
+    <div class="site-grid">
+
+      <a href="https://aspireconsultingpartners.com" class="site-card" target="_blank" rel="noopener">
+        <h3>Aspire Consulting Partners</h3>
+        <span class="domain">aspireconsultingpartners.com</span>
+        <span class="desc">Corporate site for consulting services.</span>
+        <span class="status">Live</span>
+      </a>
+
+      <a href="https://richardasp.com" class="site-card" target="_blank" rel="noopener">
+        <h3>Richard Asp</h3>
+        <span class="domain">richardasp.com</span>
+        <span class="desc">Personal site and portfolio.</span>
+        <span class="status">Live</span>
+      </a>
+
+      <a href="https://rcaservices.net" class="site-card" target="_blank" rel="noopener">
+        <h3>RCA Services</h3>
+        <span class="domain">rcaservices.net</span>
+        <span class="desc">Technical consulting and services.</span>
+        <span class="status">Live</span>
+      </a>
+
+      <a href="https://joelanne.com" class="site-card" target="_blank" rel="noopener">
+        <h3>Joelanne</h3>
+        <span class="domain">joelanne.com</span>
+        <span class="desc">Client project site.</span>
+        <span class="status">Live</span>
+      </a>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 <a href="https://aspireconsultingpartners.com">Aspire Consulting Partners LLC</a>. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
